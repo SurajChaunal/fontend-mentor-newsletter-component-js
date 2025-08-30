@@ -39,6 +39,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  min-height: 0px;
 }
 .description {
   padding: 2.4rem;
@@ -106,6 +107,7 @@ input {
 }
 input:focus {
   border: 1px solid var(--Blue-800);
+  color: var(--Blue-800);
   box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 1);
 }
 .success-section {
@@ -124,10 +126,6 @@ input:focus {
   justify-content: start;
   gap: 3rem;
   padding: 8rem 2rem 2rem 2rem;
-}
-
-.success-section bugtton {
-  margin-top: 10rem;
 }
 
 @media (min-width: 50rem) {

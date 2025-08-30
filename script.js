@@ -4,7 +4,7 @@ const userFormEl = document.getElementById("user-form");
 const errorEl = document.querySelector(".error");
 const dismissBtnEl = document.querySelector(".action-btn--dismiss");
 const userEmailEl = document.querySelector(".user-email");
-// const emailInputEl = document.querySelector(".email");
+const emailInputEl = document.getElementById("email");
 userFormEl.addEventListener("submit", function (e) {
   e.preventDefault();
   const userEmail = new FormData(this).get(`user-email`);
@@ -14,9 +14,11 @@ userFormEl.addEventListener("submit", function (e) {
     subscriptionEl.style.display = `none`;
     successEl.style.display = "flex";
     userEmailEl.textContent = userEmail;
+    errorEl.textContent = ``;
     this.reset();
   } else {
     errorEl.textContent = `valid email required`;
+    emailInputEl.style.borderColor = "hsl(4, 100%, 67%)";
   }
 });
 
