@@ -8,17 +8,20 @@ const emailInputEl = document.getElementById("email");
 userFormEl.addEventListener("submit", function (e) {
   e.preventDefault();
   const userEmail = new FormData(this).get(`user-email`);
-  // console.log(userEmail);
+  console.log(userEmail);
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (emailRegex.test(userEmail)) {
     subscriptionEl.style.display = `none`;
     successEl.style.display = "flex";
     userEmailEl.textContent = userEmail;
     errorEl.textContent = ``;
+    emailInputEl.classList.remove("input-error");
     this.reset();
   } else {
+    console.log("invalid email");
     errorEl.textContent = `valid email required`;
-    emailInputEl.style.borderColor = "hsl(4, 100%, 67%)";
+    emailInputEl.classList.add("input-error");
+    emailInputEl.value = ``;
   }
 });
 

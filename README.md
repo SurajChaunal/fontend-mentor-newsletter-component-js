@@ -40,7 +40,7 @@ Users should be able to:
 
 #### Error state
 
-![](./mobile-error.png)
+![](./error-state.png)
 
 #### success state - Desktop
 
