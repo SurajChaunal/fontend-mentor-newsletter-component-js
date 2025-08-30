@@ -49,10 +49,13 @@
             <li>Measuring to ensure updates are a success</li>
             <li>And much more!</li>
           </ul>
-          <form class="subscribe-form">
-            <label for="email" class="form-label"> Email address</label>
+          <form class="subscribe-form" id="user-form">
+            <div class="field-info">
+              <label for="email" class="form-label"> Email address</label>
+              <span class="error"></span>
+            </div>
             <input
-              type="email"
+              type="text"
               name="user-email"
               id="email"
               placeholder="email@company.com"
@@ -76,10 +79,10 @@
         <h1 class="primary-heading">Thanks for subscribing!</h1>
         <p>
           A confirmation email has been sent to
-          <strong>ash@loremcompany.com. </strong>Please open it and click the
+          <strong class="user-email"></strong>Please open it and click the
           button inside to confirm your subscription.
         </p>
-        <button class="action-btn">Dismiss message</button>
+        <button class="action-btn action-btn--dismiss">Dismiss message</button>
       </section>
       <!-- Success message end -->
       <!-- 
